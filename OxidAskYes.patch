@@ -1,0 +1,13 @@
+--- src/Installer/Package/AbstractPackageInstaller_Original.php	2021-04-12 16:59:26.000000000 +0200
++++ src/Installer/Package/AbstractPackageInstaller.php	2021-04-29 16:16:31.000000000 +0200
+@@ -198,9 +198,7 @@
+      */
+     protected function askQuestion($messageToAsk)
+     {
+-        $userInput = $this->getIO()->ask($messageToAsk, 'N');
+-
+-        return $this->isPositiveUserInput($userInput);
++        return true;
+     }
+ 
+     /**
